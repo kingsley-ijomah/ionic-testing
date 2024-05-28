@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Full name</ion-label>
+      <ion-input type="text" formControlName="fullName"></ion-input>
+    </ion-item>
+    <ion-note *ngIf="registrationForm.get('fullName')!.touched && registrationForm.get('fullName')!.hasError('required')" color="danger">
+      Full name is required.
+    </ion-note>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-note *ngIf="registrationForm.get('email')!.touched && registrationForm.get('email')!.hasError('required')" color="danger">
+      Email is required.
+    </ion-note>
+    <ion-note *ngIf="registrationForm.get('email')!.touched && registrationForm.get('email')!.hasError('email')" color="danger">
+      Enter a valid email.
+    </ion-note>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-note *ngIf="registrationForm.get('password')!.touched && registrationForm.get('password')!.hasError('required')" color="danger">
+      Password is required.
+    </ion-note>
+    <ion-note *ngIf="registrationForm.get('password')!.touched && registrationForm.get('password')!.hasError('minlength')" color="danger">
+      Password must be at least 6 characters long.
+    </ion-note>
+
+    <ion-item>
+      <ion-label position="floating">Password Confirmation</ion-label>
+      <ion-input type="password" formControlName="passwordConfirmation"></ion-input>
+    </ion-item>
+    <ion-note *ngIf="registrationForm.get('passwordConfirmation')!.touched && registrationForm.get('passwordConfirmation')!.hasError('required')" color="danger">
+      Password confirmation is required.
+    </ion-note>
+    <ion-note *ngIf="registrationForm.get('passwordConfirmation')!.touched && registrationForm.get('passwordConfirmation')!.hasError('minlength')" color="danger">
+      Password confirmation must be at least 6 characters long.
+    </ion-note>
+    <ion-note *ngIf="registrationForm.hasError('passwordMismatch') && registrationForm.get('passwordConfirmation')!.touched" color="danger">
+      Passwords do not match.
+    </ion-note>
+
+    <ion-button expand="full" type="submit">Register</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,25 @@
+ion-header {
+  --background: #f8f8f8; // Set background color for the header
+}
+
+ion-toolbar {
+  --background: #3880ff; // Set background color for the toolbar
+  --color: #fff; // Set text color for the toolbar
+}
+
+ion-title {
+  font-weight: bold; // Set font weight for the title
+}
+
+ion-item {
+  margin-top: 10px; // Add top margin to each item
+}
+
+ion-button {
+  margin-top: 20px; // Add top margin to the button
+}
+
+ion-note {
+  margin-top: 5px;
+  margin-left: 16px;
+}

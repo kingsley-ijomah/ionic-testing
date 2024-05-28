@@ -1,0 +1,53 @@
+ion-header {
+  --background: #f8f8f8; /* Set background color for the header */
+}
+
+ion-toolbar {
+  --background: #3880ff; /* Set background color for the toolbar */
+  --color: #fff; /* Set text color for the toolbar */
+}
+
+form {
+  ion-item {
+    margin-bottom: 16px;
+  }
+}
+
+ion-button {
+  margin-top: 16px;
+}
+
+ion-label a {
+  text-decoration: none;
+  color: #3880ff;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.link-question {
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.auth-link {
+  text-decoration: none;
+  color: #3880ff;
+  font-weight: bold;
+  white-space: nowrap; /* Ensure the link text stays on one line */
+}
+
+.no-padding {
+  padding: 0; /* Remove default padding to better align the text */
+}
